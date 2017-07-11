@@ -1,0 +1,3 @@
+python run.py file=Testcases/Testcases_stock.xlsx--loglevel=DEBUG--conf=dev > run.log
+
+python2.7 /home/interface/DubboInterface/DubboInterfaceTestFramework/Run/run.py file=/home/interface/DubboInterface/DubboInterfaceTestFramework/Run/Testcases/Testcases_stock.xlsx--loglevel=DEBUG--conf=dev--mail_list=wangjiliang@mftour.cn--report_path=/home/interface/DubboInterface/DubboInterfaceTestFramework/Run/reports

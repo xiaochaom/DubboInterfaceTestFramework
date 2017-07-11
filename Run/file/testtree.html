@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap report tempate</title>
+    <meta charset="utf-8">
+
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript">　　
+        $(function(){
+            $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch'); 　　
+            $('.tree li.parent_li > span').on('click', function (e) {  　　
+                var children = $(this).parent('li.parent_li').find(' > ul > li');
+                if (children.is(":visible")) {   　　children.hide('fast');   　　
+                    $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');  　　
+                } else {   　　
+                    children.show('fast');   　　
+                    $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');  　　
+                }  　　
+                e.stopPropagation(); 　　
+            });　　
+        });
+    </script>
+    <style>
+        .tr_bg_selected {
+            background-color: #ac2925;
+            text-align: center;
+
+
+        }
+    </style>
+</head>
+<body>
+<div class="tree well"><!--统计树层START，只要一个-->
+    <ul><!--统计树层START，只要一个-->
+        <li><span><i class="icon-folder-open"></i> 系统节点1</span> <!--每个系统一个START-->
+            <ul><!--每个系统一个START-->
+                <li><span><i class="icon-minus-sign"></i> 服务节点1</span> <a href=""></a><!--每个服务一个START-->
+                    <ul><!--每个服务一个START-->
+                        <li><span><i class="icon-leaf"></i> 接口节点12</span> <a href=""></a></li><!--每个接口一个-->
+                        <li><span><i class="icon-leaf"></i> 接口节点13</span> <a href=""></a></li><!--每个接口一个-->
+                    </ul><!--每个服务一个END-->
+                </li><!--每个服务一个END-->
+                <li><span><i class="icon-minus-sign"></i> 服务节点2</span> <a href=""></a>
+                    <ul>
+                        <li><span><i class="icon-leaf"></i> 接口节点22</span> <a href=""></a></li>
+                    </ul>
+                </li>
+            </ul><!--每个系统一个END-->
+        </li><!--每个系统一个END-->
+        <li><span><i class="icon-folder-open"></i> 系统节点2</span>
+            <ul>
+                <li><span><i class="icon-minus-sign"></i> 服务节点</span> <a href=""></a>
+                    <ul>
+                        <li><span><i class="icon-leaf"></i> 接口节点</span> <a href=""></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul><!--统计树层START，只要一个-->
+</div><!--统计树层END，只要一个-->
+</body>
+
+
+
+</html>
+

@@ -1,0 +1,6 @@
+[db]
+host = 10.0.18.31
+port = 3306
+username = root
+password = mfpzj123
+dbname = test_platform
